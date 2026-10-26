@@ -1,0 +1,111 @@
+{
+  "batch_id": "notarius-inv-10",
+  "defaults": {
+    "category": "Бюджетные Платежи",
+    "region": "TOSHKENT SHAHRI",
+    "district": "MIRZO ULUGBEK TUMANI",
+    "supplier_code": "0208",
+    "account": "20208000305242696001",
+    "service": "Услуги нотариуса (MUNIS)",
+    "payer_name": "OOO \"VARIANT RETAIL FINANCE\"",
+    "payment_type": "Перечислением: ДБО"
+  },
+  "items": [
+    {
+      "id": 1,
+      "group": 60,
+      "contract_id": "TEST-00000001",
+      "debtor_name": "TESTOV TEST TESTOVICH",
+      "personal_account": "40000000000001",
+      "amount": "94377.26"
+    },
+    {
+      "id": 2,
+      "group": 60,
+      "contract_id": "TEST-00000001",
+      "debtor_name": "TESTOV TEST TESTOVICH",
+      "personal_account": "40000000000002",
+      "amount": "110000.00"
+    },
+    {
+      "id": 3,
+      "group": 61,
+      "contract_id": "TEST-00000002",
+      "debtor_name": "SINOVOV SINOV SINOVOVICH",
+      "personal_account": "40000000000003",
+      "amount": "56186.38"
+    },
+    {
+      "id": 4,
+      "group": 61,
+      "contract_id": "TEST-00000002",
+      "debtor_name": "SINOVOV SINOV SINOVOVICH",
+      "personal_account": "40000000000004",
+      "amount": "110000.00"
+    },
+    {
+      "id": 5,
+      "group": 62,
+      "contract_id": "TEST-00000003",
+      "debtor_name": "NAMUNAYEV NAMUNA NAMUNAYEVICH",
+      "personal_account": "40000000000005",
+      "amount": "191290.24"
+    },
+    {
+      "id": 6,
+      "group": 62,
+      "contract_id": "TEST-00000003",
+      "debtor_name": "NAMUNAYEV NAMUNA NAMUNAYEVICH",
+      "personal_account": "40000000000006",
+      "amount": "110000.00"
+    },
+    {
+      "id": 7,
+      "group": 63,
+      "contract_id": "TEST-00000004",
+      "debtor_name": "MISOLOV MISOL O‘G‘LI",
+      "personal_account": "40000000000007",
+      "amount": "147629.89"
+    },
+    {
+      "id": 8,
+      "group": 63,
+      "contract_id": "TEST-00000004",
+      "debtor_name": "MISOLOV MISOL O‘G‘LI",
+      "personal_account": "40000000000008",
+      "amount": "110000.00"
+    },
+    {
+      "id": 9,
+      "group": 64,
+      "contract_id": "TEST-00000005",
+      "debtor_name": "TAJRIBAYEV TAJRIBA TAJRIBAYEVICH",
+      "personal_account": "40000000000009",
+      "amount": "30676.54"
+    },
+    {
+      "id": 10,
+      "group": 64,
+      "contract_id": "TEST-00000005",
+      "debtor_name": "TAJRIBAYEV TAJRIBA TAJRIBAYEVICH",
+      "personal_account": "40000000000010",
+      "amount": "110000.00"
+    },
+    {
+      "id": 11,
+      "group": 65,
+      "contract_id": "TEST-00000006",
+      "debtor_name": "TEKSHIRUVOV TEKSHIRUV YO‘LDOSHEVICH",
+      "personal_account": "40000000000011",
+      "amount": "28017.08"
+    },
+    {
+      "id": 12,
+      "group": 65,
+      "contract_id": "TEST-00000006",
+      "debtor_name": "TEKSHIRUVOV TEKSHIRUV YO‘LDOSHEVICH",
+      "personal_account": "40000000000012",
+      "amount": "110000.00"
+    }
+  ]
+}

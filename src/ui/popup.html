@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>Ipak MUNIS</title>
+  <style>
+    body { width: 280px; margin: 0; font: 13px/1.4 -apple-system, "Segoe UI", Roboto, Arial, sans-serif; color: #1f2937; }
+    header { display: flex; align-items: center; gap: 6px; padding: 10px 12px; background: #1f7a3a; color: #fff; font-weight: 600; }
+    header .who { margin-left: auto; font-weight: 400; font-size: 12px; opacity: 0.9; }
+    main { padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; }
+    dl { display: grid; grid-template-columns: 1fr auto; gap: 2px 8px; margin: 0; }
+    dt { color: #64748b; }
+    dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+    label { display: block; color: #64748b; font-size: 12px; margin-bottom: 2px; }
+    input { width: 100%; padding: 6px; border: 1px solid #cbd5e1; border-radius: 6px; font: inherit; box-sizing: border-box; }
+    footer { display: flex; gap: 6px; padding: 10px 12px; border-top: 1px solid #e2e8f0; }
+    button { flex: 1; padding: 6px; border: 1px solid #cbd5e1; border-radius: 6px; background: #f8fafc; color: #1f2937; cursor: pointer; font: inherit; font-size: 12px; }
+    button:disabled { opacity: 0.5; cursor: not-allowed; }
+    button.primary { background: #1f7a3a; border-color: #1f7a3a; color: #fff; }
+    button.link { flex: none; border: 0; background: transparent; color: #1f7a3a; text-decoration: underline; padding: 0; }
+    .muted { color: #64748b; font-size: 12px; margin: 0; }
+    .box { padding: 6px 8px; border-radius: 6px; font-size: 12px; }
+    .warn { background: #fef3c7; color: #92400e; }
+    .bad { background: #fee2e2; color: #b91c1c; }
+    .ok { background: #dcfce7; color: #166534; }
+    .info { background: #e0f2fe; color: #075985; }
+    [hidden] { display: none !important; }
+  </style>
+</head>
+<body>
+<header>
+  <span>Ipak MUNIS</span>
+  <span class="who" id="who"></span>
+</header>
+
+<main>
+  <div class="box bad" id="alert" hidden></div>
+
+  <!-- 1. Sozlanmagan -->
+  <section id="view-setup" hidden>
+    <p class="box warn">Не указан адрес сервера CollPro или нет разрешения на доступ к нему.</p>
+  </section>
+
+  <!-- 2. Login -->
+  <section id="view-login" hidden>
+    <form id="login-form">
+      <p class="muted" id="server-note"></p>
+      <label for="login">Логин (номер телефона)</label>
+      <input id="login" name="login" type="text" autocomplete="username" required>
+      <label for="password" style="margin-top:6px">Пароль</label>
+      <input id="password" name="password" type="password" autocomplete="current-password" required>
+      <button class="primary" type="submit" id="login-submit" style="width:100%;margin-top:8px">Войти</button>
+    </form>
+  </section>
+
+  <!-- 3. Ish holati -->
+  <section id="view-status" hidden>
+    <div id="batch" class="muted">Список не выбран</div>
+    <dl id="stats"></dl>
+    <div class="box info" id="outbox" hidden></div>
+    <p class="muted">Работа ведется в панели на странице банка.</p>
+  </section>
+</main>
+
+<footer>
+  <button class="primary" id="open">Открыть e-bank</button>
+  <button id="options">Настройки</button>
+  <button id="logout" hidden>Выйти</button>
+</footer>
+
+<script src="../lib/config.js"></script>
+<script src="popup.js"></script>
+</body>
+</html>

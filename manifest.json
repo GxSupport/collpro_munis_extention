@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "Ipak MUNIS — автозаполнение",
+  "version": "0.2.0",
+  "description": "Заполняет форму «Оплата MUNIS» в e-bank.ipakyulibank.uz по списку из CollPro. Оплату подписывает оператор.",
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://e-bank.ipakyulibank.uz/*"
+  ],
+  "optional_host_permissions": [
+    "https://*/*"
+  ],
+  "background": {
+    "service_worker": "src/bg/service-worker.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://e-bank.ipakyulibank.uz/*"
+      ],
+      "js": [
+        "src/page/zk-driver.js"
+      ],
+      "world": "MAIN",
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://e-bank.ipakyulibank.uz/*"
+      ],
+      "js": [
+        "src/lib/config.js",
+        "src/lib/queue.js",
+        "src/content/bridge.js",
+        "src/content/backend.js",
+        "src/content/panel.js",
+        "src/content/index.js"
+      ],
+      "css": [
+        "src/content/panel.css"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_popup": "src/ui/popup.html",
+    "default_title": "Ipak MUNIS"
+  },
+  "options_ui": {
+    "page": "src/ui/options.html",
+    "open_in_tab": true
+  }
+}
